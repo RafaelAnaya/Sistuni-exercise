@@ -5,6 +5,8 @@
  */
 package promedio;
 
+import promedio.view.PromedioView;
+
 /**
  *
  * @author RAFAEL
@@ -15,7 +17,7 @@ public class Promedio {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       PromedioView.main(null);
     }
     
 }

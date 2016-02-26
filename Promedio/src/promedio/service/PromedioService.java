@@ -15,28 +15,28 @@ public class PromedioService {
     public double Calcular3Mayores(double nota[]){
     
     double promedio;
-    if (nota[0]<nota[1] && nota[0]<nota[2] && nota[0]<nota[3] )
+    if (nota[0]<nota[1] && nota[0]<nota[2]  )
      notas[0]=0;
     else { notas[0]=nota[0];
     }
-    if (nota[1]<nota[2] && nota[1]<nota[0] && nota[1]<nota[3] )
+    if (nota[1]<nota[2] && nota[1]<nota[0] )
      notas[1]=0;
     else { notas[1]=nota[1];
     }
-    if (nota[2]<nota[0] && nota[2]<nota[1] && nota[2]<nota[3] )
+    if (nota[2]<nota[0] && nota[2]<nota[1] )
      notas[2]=0;
     else { notas[2]=nota[2];
     }
-    if (nota[3]<nota[0] && nota[3]<nota[1] && nota[3]<nota[2] )
+    if (nota[3] < nota[0] && nota[3] < nota[1] && nota[3] < nota[2] ){
      notas[3]= 0;
-    else { notas[3]=nota[3];
+    }else { notas[3]=nota[3] ;
     }
-    promedio=(notas[0]+notas[1]+notas[2]+notas[3])/4;
+    promedio =(notas[0]+notas[1]+notas[2]+notas[3])/4;
     return promedio;
     }
     public double NotaEliminada(double nota[]){
         double MalaNota=0;
-        for(int i=0; i<4;i++){
+        for(int i=0; i<3;i++){
         MalaNota= nota[i]-notas[i]+MalaNota;
         }
         return MalaNota;

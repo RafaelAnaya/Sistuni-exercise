@@ -14,7 +14,7 @@ public class MyMath {
     
     }
     
-    public long factorial(int n){
+    public static long factorial(int n){
     long f=1;
     while(n>1){
     f*=n--;
@@ -22,17 +22,31 @@ public class MyMath {
     return f;
     }
     public static int mcd(int n1,int n2){
-    int m;
+    
     
     return 0;
     }
     
     public static int mcm(int n1, int n2){
-    return 0;
+        int mini;
+        mini= Math.min(n1, n2);
+        
+    return mini;
     }
     
-    public static String fibonacci (int n){
-    return "";
+    public static int[] fibonacci (int ctd){      
+        int[] num= new int[2];
+        int[] temp= new int[ctd+1];
+        temp[0]=1;
+        num[0]=0;
+        num[1]=1;
+        for(int i=0;i<ctd;i++){ 
+            num[0]=num[1];
+            num[1]=temp[i];
+            temp[i]=num[0]+num[1];
+            temp[i+1]=num[1];
+    }
+    return temp;
     }
     public static boolean esPrimo(int n){
     return false;

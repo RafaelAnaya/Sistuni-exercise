@@ -5,10 +5,18 @@
  */
 package controller;
 
+import service.MyMath;
+
 /**
  *
  * @author Alumno
  */
 public class MateController {
+    public long factorial(int n ){
+    return MyMath.factorial(n);
+    }
+    public int[] fibonacci(int ctd){
+    return MyMath.fibonacci(ctd);
+    }
     
 }

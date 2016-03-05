@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JInternalFrame;
+
 /**
  *
  * @author Alumno
@@ -62,9 +64,19 @@ public class FormularioMDI extends javax.swing.JFrame {
         menuOpcion.add(menuOpcionesFactorial);
 
         menuOpcionesMcdMcm.setText("MCD y MCM");
+        menuOpcionesMcdMcm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuOpcionesMcdMcmActionPerformed(evt);
+            }
+        });
         menuOpcion.add(menuOpcionesMcdMcm);
 
         menuOpcionesFibonacci.setText("Fibonacci");
+        menuOpcionesFibonacci.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuOpcionesFibonacciActionPerformed(evt);
+            }
+        });
         menuOpcion.add(menuOpcionesFibonacci);
 
         menuOpcionesPrimo.setText("Primo");
@@ -98,12 +110,20 @@ public class FormularioMDI extends javax.swing.JFrame {
     }//GEN-LAST:event_menuArchivoSalirActionPerformed
 
     private void menuOpcionesFactorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuOpcionesFactorialActionPerformed
-      
+      mostrarFormulario(FactorialView.class);       
     }//GEN-LAST:event_menuOpcionesFactorialActionPerformed
 
     private void menuOpcionesPrimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuOpcionesPrimoActionPerformed
-        // TODO add your handling code here:
+      mostrarFormulario(Primo.class);
     }//GEN-LAST:event_menuOpcionesPrimoActionPerformed
+
+    private void menuOpcionesMcdMcmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuOpcionesMcdMcmActionPerformed
+      mostrarFormulario(McdMcm.class);
+    }//GEN-LAST:event_menuOpcionesMcdMcmActionPerformed
+
+    private void menuOpcionesFibonacciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuOpcionesFibonacciActionPerformed
+       mostrarFormulario(Fibonacci.class);
+    }//GEN-LAST:event_menuOpcionesFibonacciActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,5 +171,32 @@ public class FormularioMDI extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuOpcionesMcdMcm;
     private javax.swing.JMenuItem menuOpcionesPrimo;
     // End of variables declaration//GEN-END:variables
+
+    private void mostrarFormulario(Class<?> aClass) {
+        try {
+            JInternalFrame view = null;
+            view = existeForm(aClass);
+            if(view == null){
+            view = (JInternalFrame) Class.forName(aClass.getName()).newInstance();
+            desktopPane.add(view);
+            view.setVisible(true);
+            }
+            view.setSelected(true);
+        }catch(Exception e){
+        
+        }
+    }
+
+    private JInternalFrame existeForm(Class<?> aClass) {
+        
+        JInternalFrame view=null;
+        for(JInternalFrame bean: desktopPane.getAllFrames()){
+        if(aClass.isInstance(bean)){
+        view = bean;
+        break;
+        }
+        }
+       return view; 
+    }
 
 }

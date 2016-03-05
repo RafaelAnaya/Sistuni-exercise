@@ -36,11 +36,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="MCD y MCM"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuOpcionesMcdMcmActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuOpcionesFibonacci">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fibonacci"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuOpcionesFibonacciActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuOpcionesPrimo">
               <Properties>

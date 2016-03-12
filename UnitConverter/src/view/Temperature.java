@@ -55,7 +55,7 @@ public class Temperature extends javax.swing.JPanel {
             }
         });
 
-        btnConverter.setText("CONVERTIR");
+        btnConverter.setText("CONVERT");
         btnConverter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConverterActionPerformed(evt);
@@ -83,7 +83,7 @@ public class Temperature extends javax.swing.JPanel {
                         .addComponent(txtConvTemp, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnConverter)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

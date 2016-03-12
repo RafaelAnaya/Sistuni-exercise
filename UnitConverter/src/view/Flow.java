@@ -45,7 +45,7 @@ public class Flow extends javax.swing.JPanel {
 
         txtToFlow.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Bpd(us)", "M3h", "Gpm(us)", "L/h" }));
 
-        btnConvFlow.setText("CONVERTIR");
+        btnConvFlow.setText("CONVERT");
         btnConvFlow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConvFlowActionPerformed(evt);

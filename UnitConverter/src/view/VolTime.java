@@ -36,7 +36,7 @@ public class VolTime extends javax.swing.JPanel {
         btnCacular = new javax.swing.JButton();
         txtCaudal = new javax.swing.JTextField();
 
-        jLabel1.setText("Volumen");
+        jLabel1.setText("Volume");
 
         jLabel2.setText("Time");
 
@@ -69,7 +69,7 @@ public class VolTime extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(57, 57, 57)
                         .addComponent(txtCaudal, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

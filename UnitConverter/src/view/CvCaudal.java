@@ -42,11 +42,11 @@ public class CvCaudal extends javax.swing.JPanel {
 
         jLabel1.setText("Cv");
 
-        jLabel2.setText("Gravedad");
+        jLabel2.setText("Gravity");
 
         jLabel3.setText("High Pressure");
 
-        jLabel4.setText("Low Presure");
+        jLabel4.setText("Low Pressure");
 
         txtCaudal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

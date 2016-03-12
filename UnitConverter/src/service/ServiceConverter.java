@@ -10,7 +10,7 @@ package service;
  * @author RAFAEL
  */
 public class ServiceConverter {
-    String unit1,unit2;
+    //String unit1,unit2;
     
     public static double Temperature(double num, String unit1,String unit2){
      double conv=0.0;

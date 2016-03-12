@@ -5,6 +5,7 @@
  */
 package controller;
 
+import lib.LibCalcFlow;
 import service.ServiceConverter;
 
 /**
@@ -20,5 +21,22 @@ public class ControllerConverter {
     }
     public double Pressure (double convp,String unitp1,String unitp2){
     return ServiceConverter.Pressure(convp, unitp1, unitp2);
+    }
+    
+    private LibCalcFlow service;
+    public ControllerConverter(){
+    service = new LibCalcFlow();
+    }
+    public double CalculingFlow( double vol,double time){
+    double caudal = service.Calc(vol, time);
+    return caudal;
+    }
+    public double CalculingFlow (double cv,double hpress, double lpress, double gravedad){
+    double caudal = service.Calc(cv, lpress, hpress, gravedad );
+    return caudal;
+    }
+    public double CalculingFlow (double constan, double hpress, double lpress){
+    double caudal = service.Calc(constan, lpress, hpress);
+        return caudal;
     }
 }

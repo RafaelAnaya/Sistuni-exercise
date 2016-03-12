@@ -48,8 +48,9 @@ public class FlowCalc extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void AgregartipFl() {
-        PaneFlCal.add(" Velocity & Area ", new VelAre());
-        PaneFlCal.add(" Volume & time ", new VolTime());
+        PaneFlCal.add(" Vol & time ", new VolTime());
         PaneFlCal.add(" Diff. of Pre & Const.", new DifPreK());
+        PaneFlCal.add(" Cv & pressure ", new CvCaudal());
     }
+        
 }
